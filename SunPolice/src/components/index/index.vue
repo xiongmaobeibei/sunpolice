@@ -59,13 +59,15 @@ export default {
         background-color pink
         .news-pic
           width 48%
-          height 300px
+          height 0
           background-color red
+          padding-bottom 35%
         .news-tab
           width 48%
           margin-right 0
-          height 300px
+          height 0
           background-color blue
+          padding-bottom 35%
     .interact-container
       width 100%
       height auto
