@@ -9,10 +9,10 @@ export default {
 }
 </script>
 <style lang="stylus" rel="stylesheet/stylus" scoped>
-    .footer{
-        padding-top 25px
-        text-align center
-        background rgb(82,130,170)
-        color white
-    }
+  .footer
+    padding-top 25px
+    font-size 28px
+    text-align center
+    background rgb(82,130,170)
+    color white
 </style>

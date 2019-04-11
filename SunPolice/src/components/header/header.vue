@@ -9,8 +9,8 @@
                 <span>2019年3月26日</span>
             </div>
             <div class="button-group">
-                <input type="button" value="登录"/>
-                <input type="button" value="注册"/>
+                <input type="button" value="登录" @click="jumpLog"/>
+                <input type="button" value="注册" @click="jumpLog"/>
             </div>
         </div>
         <div class="bottom">
@@ -29,6 +29,12 @@
 </template>
 <script>
 export default {
+  methods: {
+    jumpLog () {
+      this.$emit('jump', 'jumped')
+      console.log('点击了')
+    }
+  }
 }
 </script>
 <style lang="stylus" rel="stylesheet/stylus">
@@ -48,28 +54,35 @@ export default {
             .button
                 width 23px
                 height 22px
-                bg-image('u162')
+                background-image url(u162.png)
+                background-size 23px 22px
+                background-repeat no-repeat
                 float left
                 margin 9px 5px 9px 5px
             .text
                 width 70%
-                height 20px
+                height 14px
                 border 0px
                 border-radius 5px
                 float left
-                margin-bottom 5px
-                margin 9px 3px 10px 3px
+                margin 10px 3px 13px 3px
         .time
             display inline-block
-            width 120px
+            width 220px
+            font-size 20px
             position absolute
             right 168px
             color white
         .button-group
-            display inline-block
-            width 100px
-            right 10px
+            line-height 0px
+            right 5px
             position absolute
+            input
+              font-size 15px
+              display inline-block
+              border 0px
+              text-align center
+              border-radius 15px
     .bottom
         background-color rgb(14,30,45)
         width 100%
@@ -82,7 +95,6 @@ export default {
             .left-content
                 width 50%
                 position absolute
-                margin-top 5px
                 .title-icon
                     width 60px
                     height 60px
@@ -94,7 +106,6 @@ export default {
                     font-family '宋体'
                     font-weight bold
                     font-size 35px
-                    padding -bottom 20px
                     display inline-block
                     margin-left 10px
                     letter-spacing 6px
@@ -102,12 +113,11 @@ export default {
                 width 50%
                 font-family '楷体'
                 font-size 20px
-                margin-top 10px
                 text-align center
                 display inline-block
         .image-wrapper
             height 300px
             bg-image('u2')
-            background-size 100%
+            background-size 100% 250px
             background-repeat no-repeat
 </style>

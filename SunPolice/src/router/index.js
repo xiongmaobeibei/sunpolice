@@ -5,6 +5,10 @@ Vue.use(Router)
 
 export const constantRoutes = [
   {
+    path: 'log',
+    component: () => import('../pages/log/log')
+  },
+  {
     path: '/login',
     component: () => import('../pages/log/login')
   },
@@ -23,13 +27,13 @@ export const constantRoutes = [
 ]
 
 const createRouter = () => new Router({
-scrollBehavior: () => ({ y: 0 }),
-routes: constantRoutes
+  scrollBehavior: () => ({ y: 0 }),
+  routes: constantRoutes
 })
 const router = createRouter()
 
 export function resetRouter () {
-const newRouter = createRouter()
-router.matcher = newRouter.matcher // reset router
+  const newRouter = createRouter()
+  router.matcher = newRouter.matcher // reset router
 }
 export default router
