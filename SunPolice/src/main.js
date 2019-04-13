@@ -2,16 +2,10 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
-// import log from './pages/log/log'
-// import login from './pages/log/login'
-// import regist from './pages/log/regist'
-// import updateCode from './pages/log/updateCode'
 import VueResource from 'vue-resource'
 import router from './router'
-// import personality from './pages/users/master/personality'
-// import systemManage from './pages/users/master/systemManage'
-// import userManage from './pages/users/master/userManage'
-// import master from './pages/users/master/master'
+// 引入flexible
+import 'lib-flexible'
 
 Vue.config.productionTip = false
 

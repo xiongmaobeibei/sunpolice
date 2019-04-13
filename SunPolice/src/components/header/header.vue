@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="wrapper">
         <div class="top">
             <div class="search-wrapper">
                 <div class="button"></div>
@@ -43,42 +43,41 @@ export default {
         margin 0
         padding 0
         width 100%
-        height 40px
+        height 80px
+        line-height 80px
         background-color rgb(0,94,154)
-        line-height 40px
         .search-wrapper
-            width 20%
+            width 400px
             margin-left 10px
             float left
             display inline-block
             .button
-                width 23px
-                height 22px
+                width 40px
+                height 38px
                 background-image url(u162.png)
-                background-size 23px 22px
+                background-size 40px 38px
                 background-repeat no-repeat
                 float left
-                margin 9px 5px 9px 5px
+                margin 18px 5px 9px 35px
             .text
-                width 70%
-                height 14px
+                width 250px
+                height 40px
                 border 0px
                 border-radius 5px
                 float left
-                margin 10px 3px 13px 3px
+                margin 20px 3px 13px 13px
         .time
             display inline-block
             width 220px
-            font-size 20px
+            font-size 24px
             position absolute
             right 168px
             color white
         .button-group
-            line-height 0px
-            right 5px
+            right 15px
             position absolute
             input
-              font-size 15px
+              font-size 25px
               display inline-block
               border 0px
               text-align center
@@ -86,38 +85,38 @@ export default {
     .bottom
         background-color rgb(14,30,45)
         width 100%
-        height 420px
+        height 700px
         .title
             color:#99FFFF
-            text-align:center
-            height 100px
-            line-height 100px
+            height 150px
+            line-height 170px
             .left-content
                 width 50%
-                position absolute
+                float left
+                text-align center
                 .title-icon
-                    width 60px
-                    height 60px
-                    background-size 60px 60px
+                    width 90px
+                    height 90px
+                    background-size 90px 90px
                     background-repeat no-repeat
                     bg-image('u10')
                     display inline-block
                 .title-text
                     font-family '宋体'
                     font-weight bold
-                    font-size 35px
+                    font-size 55px
                     display inline-block
                     margin-left 10px
                     letter-spacing 6px
             .right-content
                 width 50%
+                float right
                 font-family '楷体'
-                font-size 20px
-                text-align center
-                display inline-block
+                font-size 30px
+                text-align left
         .image-wrapper
-            height 300px
+            height 650px
             bg-image('u2')
-            background-size 100%
+            background-size 100% 450px
             background-repeat no-repeat
 </style>

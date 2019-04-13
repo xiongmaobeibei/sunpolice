@@ -1,5 +1,5 @@
 <template>
-    <div>我是regist</div>
+    <div></div>
 </template>
 <script>
 export default {
