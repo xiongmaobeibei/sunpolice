@@ -69,4 +69,5 @@ export default {
         border-radius 30px
         text-align center
         line-height 40px
+        font-size 18px
 </style>
