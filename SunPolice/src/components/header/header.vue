@@ -85,7 +85,7 @@ export default {
     .bottom
         background-color rgb(14,30,45)
         width 100%
-        height 700px
+        height 680px
         .title
             color:#99FFFF
             height 150px
@@ -117,6 +117,6 @@ export default {
         .image-wrapper
             height 650px
             bg-image('u2')
-            background-size 100% 450px
+            background-size 100% 430px
             background-repeat no-repeat
 </style>

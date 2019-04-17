@@ -10,6 +10,7 @@ import 'lib-flexible'
 Vue.config.productionTip = false
 
 Vue.use(VueResource)
+require('./util/mock')
 
 /* eslint-disable no-new */
 new Vue({

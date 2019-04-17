@@ -6,7 +6,6 @@
     <v-footer class="footer"/>
   </div>
 </template>
-
 <script>
 import header from './components/header/header.vue'
 import footer from './components/footer/footer.vue'
