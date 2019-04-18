@@ -8,7 +8,7 @@
         <div class="main-body">
           <div class="news-report">
             <div class="news-pic">
-
+              <myswiper></myswiper>
             </div>
             <div class="news-tab">
 
@@ -33,7 +33,16 @@
 </template>
 
 <script>
+import swiper from '../rotationchart/swiper'
 export default {
+  data () {
+    return {
+
+    }
+  },
+  components: {
+    myswiper: swiper
+  }
 }
 </script>
 
@@ -56,6 +65,7 @@ export default {
         display flex
         flex-direction row
         justify-content space-between
+        flex-wrap wrap
         background-color pink
         .news-pic
           width 48%
