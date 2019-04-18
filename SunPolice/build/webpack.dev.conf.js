@@ -9,14 +9,15 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
-var logdata = require('../data.json')
-var login = logdata.data.Router
+
+var appData = require('../data.json')
+var user = appData.user
 
 const express = require('express')
 const app = express()
 
-var apiRoutes = express.Router()
-app.use('/api',apiRoutes)
+var apiRouter = express.Router()
+app.use('/api',apiRouter)
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
@@ -52,12 +53,12 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       poll: config.dev.poll,
     },
     before(app) {
-      app.get('/api/login',(req,res) => {
+      app.get('/api/user'),(req,res) => {
         res.json({
           errno: 0,
-          data: login
+          data: user
         })
-      })
+      }
     }
   },
   plugins: [

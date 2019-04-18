@@ -15,6 +15,7 @@
     </div>
 </template>
 <script>
+// const ERR_OK = 0
 export default {
   props: {
     user: {
@@ -23,38 +24,37 @@ export default {
   },
   data () {
     return {
-      radio: '0',
       tip: '',
       showtip: false,
       creditid: '请输入',
       password: '密码',
-      param: 1
+      param: 1,
+      myuser: {}
     }
   },
   methods: {
     login () {
-      console.log('sdfsdf')
-      console.log(this.creditid + this.password)
+      this.$http.get('api/log').then(response => {
+        console.log(response.body)
+      })
+      // console.log(this.creditid + this.password)
       // let data = {'id': this.creditid, 'password': this.password}
-      // this.$emit('childFn', this.tip)
-      // 请求后台端口
-      /*
-      this.$http.post('/api/login', data).then((response) => {
-        console.log(response.data)
-        console.log(this.tip)
-        if (response.data === 0) {
-          this.tip = '该用户不存在'
-          this.showtip = false
-        } else if (response.data === 1) {
-          this.tip = '登录成功'
-          this.showtip = true
-          this.$emit('childFn', this.tip)
-          //   setCookie('creditid', this.creditid, 1000 * 60)
-          //   setTimeout(function () {
-          //     this.$router.push('/mater')
-          //   }.bind(this), 1000)
-        }
-      }) */
+      // 请求后台接口
+      // this.$http.get('/api/dolog').then(response => {
+      //   console.log(response.data)
+      //   // if (response.data === 0) {
+      //   //   this.tip = '该用户不存在'
+      //   //   this.showtip = false
+      //   // } else if (response.data === 1) {
+      //   //   this.tip = '登录成功'
+      //   //   this.showtip = true
+      //   //   this.$emit('childFn', this.tip)
+      //   //   //   setCookie('creditid', this.creditid, 1000 * 60)
+      //   //   //   setTimeout(function () {
+      //   //   //     this.$router.push('/mater')
+      //   //   //   }.bind(this), 1000)
+      //   // }
+      // })
     }
   }
 }
